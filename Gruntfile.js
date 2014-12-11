@@ -59,6 +59,14 @@ module.exports = function (grunt) {
       }
     },
 
+    bump: {  
+      files: ["bower.json", "package.json"],
+      updateConfigs: ["pkg"],
+      commitFiles: ["-a"],
+      tagName: '%VERSION%',
+      push: false
+    },
+
     // Empties folders to start fresh
     clean: {
       build: {
