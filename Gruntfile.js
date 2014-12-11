@@ -65,7 +65,8 @@ module.exports = function (grunt) {
         commitFiles: ["-a"],
         commit: true,
         tagName: '%VERSION%',
-        push: true
+        push: true,
+        pushTo: 'origin'
       }
     },
 
