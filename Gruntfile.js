@@ -51,10 +51,10 @@ module.exports = function (grunt) {
     watch: {
       build: {
         files: [
-          '<%= yeoman.src %>/scripts/**/*.js'
+          '<%= yeoman.src %>/ng/**/*.js'
         ],
         tasks: [
-          'build'
+          'angular:build'
         ]
       }
     },
@@ -64,7 +64,7 @@ module.exports = function (grunt) {
       build: {
         dot: true,
         src: [
-          '<%= yeoman.src %>/js/{,*/}*'
+          '<%= yeoman.js %>/{,*/}*'
         ]
       },
       dist: {
@@ -84,24 +84,27 @@ module.exports = function (grunt) {
         separator: ';'
       },
       angular: {
-        src: ['<%= yeoman.src %>/ng/**/*.js'],
+        src: [
+          '<%= yeoman.src %>/ng/share-link.js',
+          '<%= yeoman.src %>/ng/services/**/*.js'
+        ],
         dest: '<%= yeoman.js %>/ng-share-links.js',
       }
     },
 
-    // uglify: {
-    //   options: {
-    //     sourceMap: true,
-    //     sourceMapName: '<%= yeoman.src %>/js/app.min.js.map'
-    //   },
-    //   build: {
-    //     files: {
-    //       '<%= yeoman.src %>/js/app.min.js': [
-    //         '<%= yeoman.src %>/js/app.js'
-    //       ]
-    //     }
-    //   }
-    // },
+    uglify: {
+      angular: {
+        options: {
+          sourceMap: true,
+          sourceMapName: '<%= yeoman.dist %>/ng-share-links.min.js.map'
+        },
+        files: {
+          '<%= yeoman.dist %>/ng-share-links.min.js': [
+            '<%= yeoman.js %>/ng-share-links.js'
+          ]
+        }
+      }
+    },
 
     // Test settings
     karma: {
@@ -119,7 +122,8 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('angular:build', [
-    'concat:angular'
+    'concat:angular',
+    'uglify:angular'
   ]);
 
   // simple build task
