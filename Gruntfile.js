@@ -62,11 +62,10 @@ module.exports = function (grunt) {
     bump: {  
       options: {
         files: ["bower.json", "package.json"],
-        // updateConfigs: ["pkg"],
         commitFiles: ["-a"],
         commit: true,
         tagName: '%VERSION%',
-        push: false
+        push: true
       }
     },
 
