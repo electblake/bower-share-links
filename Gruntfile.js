@@ -54,7 +54,7 @@ module.exports = function (grunt) {
           '<%= yeoman.src %>/ng/**/*.js'
         ],
         tasks: [
-          'angular:build'
+          'build'
         ]
       }
     },
@@ -128,12 +128,11 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:build',
-    'angular:build',
-    // 'uglify:build'
+    'concat:angular'
   ]);
 
-  grunt.registerTask('angular:build', [
-    'concat:angular',
+  grunt.registerTask('release', [
+    'build',
     'uglify:angular'
   ]);
 
