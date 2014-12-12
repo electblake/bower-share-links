@@ -1,13 +1,12 @@
 {
   "name": "share-links",
   "version": "0.0.5",
-  "description": "",
-  "main": "Gruntfile.js",
+  "description": "Open Popup Windows to Simple Social Share URLs",
   "homage": "https://github.com/electblake/browser-share-links",
+  "author": "electblake <electblake@gmail.com>",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "electblake <electblake@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "grunt": "^0.4.5",

@@ -11,9 +11,18 @@ This is in development, but will look to combine a lot of the pop-ups, dialogs, 
 `<script src="bower_components/share-links/js/ng-share-links.js"></script>`
 
 ```
-<a href="http://domain.com/1/2/post.html" share-type="facebook" share-link="postShareObjName" class="button facebook">
+<a href="http://domain.com/1/2/post.html" share-type="facebook" share-item="post.shareItem" class="button facebook">
   Share on Facebook
 </a>
+```
+
+Share Item
+```
+{
+	link: 'http://doma.in/sh0rt-c0d3',
+	title: 'My Share Title',
+	description: 'Short share description'
+}
 ```
 
 ### Help
