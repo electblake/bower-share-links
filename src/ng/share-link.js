@@ -28,9 +28,13 @@ angular.module('ngShareLinks', [])
 					element.on('click', function($evt) {
 						$evt.stopPropagation();
 						try {
-							service.open(item).then(function(result) {
-								console.log('share window result', result);
-							});
+							service.open(item)
+								.then(function(result) {
+									console.log('share window result', result);
+								})
+								.catch(function(err) {
+									throw err;
+								});
 						} catch (err) {
 							// problem opening service sharer
 						}
