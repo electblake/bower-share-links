@@ -3,6 +3,7 @@
   "version": "0.0.4",
   "description": "",
   "main": "Gruntfile.js",
+  "homage": "https://github.com/electblake/browser-share-links",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
