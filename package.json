@@ -2,7 +2,7 @@
   "name": "share-links",
   "version": "0.0.5",
   "description": "Open Popup Windows to Simple Social Share URLs",
-  "homage": "https://github.com/electblake/browser-share-links",
+  "homepage": "https://github.com/electblake/browser-share-links",
   "author": "electblake <electblake@gmail.com>",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
