@@ -9,15 +9,18 @@
 			expect(shareItem, 'shareItem').to.be.an('object');
 			expect(shareItem.link, 'Share Link').to.be.a('string').and.to.have.length.above(0);
 
+			var thisHostURL = new URI(shareItem.link);
+
 			var _defaults = {
-				app_id: 1234,
+				app_id: window.FACEBOOK_APP_ID,
 				display: 'popup',
-				url: shareItem.link,
-				redirect_uri: null
+				href: shareItem.link,
+				redirect_uri: 'http://' + thisHostURL.host()
 			};
 
-			var popup_url = new URI('https://www.facebook.com/dialog/share');
-			// popup_url.query(_defaults);
+			// var popup_url = new URI('http://www.facebook.com/sharer.php');
+			var popup_url = new URI('http://www.facebook.com/dialog/share');
+			popup_url.query(_defaults);
 
 			var window_options = {
 				width: null,
