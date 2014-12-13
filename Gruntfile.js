@@ -97,6 +97,7 @@ module.exports = function (grunt) {
       angular: {
         src: [
           '<%= yeoman.src %>/ng/share-link.js',
+          '<%= yeoman.src %>/ng/config/**/*.js',
           '<%= yeoman.src %>/ng/services/**/*.js'
         ],
         dest: '<%= yeoman.js %>/ng-share-links.js',
