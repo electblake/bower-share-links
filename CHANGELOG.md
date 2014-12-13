@@ -1,3 +1,19 @@
+### 0.0.8 (2014-12-13)
+
+
+#### Bug Fixes
+
+* **devops:** fixed grunt build ([5908efd2](https://github.com/electblake/browser-share-links/commit/5908efd24c0467a50320235a3a725b98c4055027))
+
+
+#### Features
+
+* **configuration:** added angular provider for configuration (untested) ([03bd2b83](https://github.com/electblake/browser-share-links/commit/03bd2b83a9e3a481b4da469b26c23f435176b46d))
+* **services:**
+  * switched to share dialog for facebook service share ([a375ae9f](https://github.com/electblake/browser-share-links/commit/a375ae9fc111cd3418f35e7659802c49c739f6e6))
+  * added twitter tweet service support ([a91467e1](https://github.com/electblake/browser-share-links/commit/a91467e1b3f2d1a6a516ef4c3a793352e1f23b5f))
+
+
 ### 0.0.7 (2014-12-12)
 
 

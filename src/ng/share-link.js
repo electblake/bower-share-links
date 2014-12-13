@@ -1,4 +1,5 @@
 window.ShareLinkServices = {};
+window.ShareLinkConfig = {};
 angular.module('ngShareLinks', [])
 	.directive('shareType', ['$log', '$q', function($log, $q) {
 		return {
