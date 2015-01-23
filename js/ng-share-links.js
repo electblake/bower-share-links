@@ -76,17 +76,18 @@ angular.module('ngShareLinks')
 			expect(shareItem, 'shareItem').to.be.an('object');
 			expect(shareItem.link, 'Share Link').to.be.a('string').and.to.have.length.above(0);
 
-			var thisHostURL = new URI(shareItem.link);
+			var thisHostURL = new URI(window.location.href);
 
 			var _defaults = {
 				app_id: window.FACEBOOK_APP_ID,
 				display: 'popup',
 				href: shareItem.link,
-				redirect_uri: 'http://' + thisHostURL.host()
+				link: shareItem.link,
+				redirect_uri: 'http://' + thisHostURL.host() + '/close-popup'
 			};
 
 			// var popup_url = new URI('http://www.facebook.com/sharer.php');
-			var popup_url = new URI('http://www.facebook.com/dialog/share');
+			var popup_url = new URI('http://www.facebook.com/dialog/feed');
 			popup_url.query(_defaults);
 
 			var window_options = {
